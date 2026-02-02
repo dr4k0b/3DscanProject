@@ -229,22 +229,22 @@ MonoBehaviour:
   crtRenderSettings: {fileID: 11400000, guid: 2d929546960894d169f1999a321e4ff4, type: 2}
   _runtimeMaterial: {fileID: 374756789}
   data:
-    pixelationAmount: 3
+    pixelationAmount: 9
     maxColorChannels:
       red: 2
       green: 1
       blue: 1
       greyScale: 0
     dithering4: 0
-    dithering8: 0.663
-    vignette: 0.561
-    innerCurve: 4.7
-    monitorCurve: 0.082
+    dithering8: 0.819
+    vignette: 1
+    innerCurve: 20
+    monitorCurve: 0.298
     monitorInnerSize:
       width: 0
       height: 0
     monitorOutterSize:
-      width: 0.058
+      width: 0.275
       height: 0.1
     zoom: 1.17
     monitorRoundness: 0.2
