@@ -11,7 +11,11 @@ public class CameraInfo : MonoBehaviour
     {
         for (int i = 0; i < cameras.Length; i++)
         {
-            cameras[i].enabled = (i == currentCamera);
+            cameras[i].Priority = 0;
+            if (i == currentCamera)
+            {
+                cameras[i].Priority = 1;
+            }
         }
     }
 }
