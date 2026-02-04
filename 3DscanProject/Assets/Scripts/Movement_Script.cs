@@ -9,13 +9,19 @@ public class Movement_Script : MonoBehaviour
 
     public float speed = 6f;
 
+    Animator ani;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        ani=GetComponent<Animator>();
+    }
     void Update()
     {
         float Horizontal = Input.GetAxisRaw("Horizontal");
         float Vertical = Input.GetAxisRaw("Vertical");
         Vector3 Direction = new Vector3(Horizontal, 0f, Vertical).normalized;
+
+
 
         if (Direction.magnitude >= 0.1f)
         {
@@ -23,6 +29,12 @@ public class Movement_Script : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
             controller.Move(Direction * speed * Time.deltaTime);
+
+            ani.SetBool("Walk", true);
+        }
+        else
+        {
+            ani.SetBool("Walk", false);
         }
 
     }
