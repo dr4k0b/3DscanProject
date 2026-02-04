@@ -1,16 +1,17 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class CameraInfo : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public int currentCamera;
 
-    // Update is called once per frame
-    void Update()
+    public CinemachineCamera[] cameras;
+
+    private void Update()
     {
-        
+        for (int i = 0; i < cameras.Length; i++)
+        {
+            cameras[i].enabled = (i == currentCamera);
+        }
     }
 }
