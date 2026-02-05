@@ -16,11 +16,15 @@ public class Door : MonoBehaviour
 
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) < 2 && Input.GetKeyUp(KeyCode.E))
+        if (Vector2.Distance(transform.position, player.position) < 2 && Input.GetKeyUp(KeyCode.E) && !cf.hasEntered)
         {
+            Debug.Log("door");
             player.position = Path.position;
             cf.currentCamera = pathCamera;
+            cf.hasEntered = true;
         }
+        else 
+            cf.hasEntered = false;
     }
 
     private void OnDrawGizmos()

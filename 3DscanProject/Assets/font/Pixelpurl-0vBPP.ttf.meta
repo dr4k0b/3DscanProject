@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: e3265ab4bf004d28a9537516768c1c75
+guid: 51a7dc3a87c945649b2ebb3bfc2fcc73
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 69
+  fontSize: 16
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Liberation Sans
+  - PixelPurl
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

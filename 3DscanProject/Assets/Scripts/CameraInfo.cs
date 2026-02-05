@@ -4,6 +4,7 @@ using UnityEngine;
 public class CameraInfo : MonoBehaviour
 {
     public int currentCamera;
+    public bool hasEntered;
 
     public CinemachineCamera[] cameras;
 

@@ -13,8 +13,10 @@ public class Cornerman_Script : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(interactKey))
         {
             closeall();
-            DialogueIndex = Random.Range(0, 4);
+            if(DialogueIndex >= dialoguePanel.Length) 
+                DialogueIndex = 0;
             dialoguePanel[DialogueIndex].SetActive(true);
+            DialogueIndex++;
         }
     }
     private void closeall()
