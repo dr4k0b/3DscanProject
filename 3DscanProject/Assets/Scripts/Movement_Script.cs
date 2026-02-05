@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
@@ -13,7 +14,7 @@ public class Movement_Script : MonoBehaviour
 
     private void Start()
     {
-        ani=GetComponent<Animator>();
+        ani = GetComponent<Animator>();
     }
     void Update()
     {
@@ -25,7 +26,7 @@ public class Movement_Script : MonoBehaviour
 
         if (Direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf .Atan2(Direction.x, Direction.z) * Mathf.Rad2Deg;
+            float targetAngle = Mathf.Atan2(Direction.x, Direction.z) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
             controller.Move(Direction * speed * Time.deltaTime);
@@ -38,4 +39,5 @@ public class Movement_Script : MonoBehaviour
         }
 
     }
+           
 }
