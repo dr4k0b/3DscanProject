@@ -16,10 +16,15 @@ public class Door : MonoBehaviour
 
     void Update()
     {
-        if(Vector2.Distance(transform.position, player.position) < 2 && Input.GetKeyUp(KeyCode.E))
+        if (Vector2.Distance(transform.position, player.position) < 2 && Input.GetKeyUp(KeyCode.E))
         {
             player.position = Path.position;
             cf.currentCamera = pathCamera;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 2);
     }
 }
