@@ -1,7 +1,5 @@
-using System.Runtime.CompilerServices;
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class Movement_Script : MonoBehaviour
 {
@@ -11,10 +9,12 @@ public class Movement_Script : MonoBehaviour
     public float speed = 6f;
 
     Animator ani;
+    AudioManager am;
 
     private void Start()
     {
         ani = GetComponent<Animator>();
+        am = GetComponent<AudioManager>();
     }
     void Update()
     {
@@ -39,5 +39,5 @@ public class Movement_Script : MonoBehaviour
         }
 
     }
-           
+
 }
