@@ -26,14 +26,14 @@ public class Door : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) < 2 && Input.GetKeyUp(KeyCode.E) && !hasEntered)
         {
             Debug.Log("door");
-            player.GetComponent<Movement_Script>().enabled = false;
+            player.GetComponent<CharacterController>().enabled = false;
             player.position = Path.position;
             cf.currentCamera = pathCamera;
             hasEntered = true;
         }
         else
         {
-            player.GetComponent<Movement_Script>().enabled = true;
+            player.GetComponent<CharacterController>().enabled = true;
             hasEntered = false;
 
         }
